@@ -1,0 +1,256 @@
+@font-face {
+	font-family:"ballpark";
+	src:url("polices/ballpark.svg");
+	src:url("polices/ballpark.eot");
+	src:url("polices/ballpark.ttf");
+	src:url("polices/ballpark.woff");
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:"dayrom";
+	src:url("polices/dayrom.svg");
+	src:url("polices/dayrom.eot");
+	src:url("polices/dayrom.ttf");
+	src:url("polices/dayrom.woff");
+	font-weight:normal;
+	font-style:normal;
+}
+/*TOUTE LA PAGE --------------------------------*/
+
+body {
+	background-color:rgb(246,234,203);  /*Couleur de fond en dehors de la main page */
+	font-family:"Trebuchet MS",Arial,sans-serif;
+	color:#181818;
+}
+
+#main_page {
+	width:1000px; 			/*Définition de la largeur max de la page */
+	margin:auto; 			/*Centrage de la page globale */
+}
+
+h1 {
+	font-family:"dayrom",Arial,sans-serif;
+	font-size:1.2em;
+	font-weight:normal;
+}
+
+
+/*HEADER ---------------------------------------*/
+/* -------------- */
+
+header {
+	background-color:rgb(254,247,218);
+	padding:20px 20px 20px 20px;
+	/*background:url("images/separateur.png") repeat-x bottom;*/
+
+	display:flex;
+	flex-direction:row;
+	align-items:end;  /* Met les nav au même niveau que le carnet */
+	justify-content:space-between;
+	
+	box-shadow:0px 5px 5px grey;
+}
+
+.logo {
+	font-family:"ballpark", Arial, sans-serif;
+	display:flex;
+	flex-direction:row;
+	align-items:baseline;			/*Aligne le logo et Zozor sur la baseline de l'axe secondaire */
+	height:60px;
+}
+
+h2 {								/*SOus-titre "Carnets de voyage" */
+	font-family:"dayrom",Arial,sans-serif;
+	font-size:1em;
+	margin:0;						/*Permet d'avoir le sous-tire collé au logo */
+}
+
+.logoEtTitre {
+	display:flex;
+	flex-direction:column;
+}
+
+
+/*Partie droite du header -----*/
+header ul li {
+	display:inline;
+	
+	font-family:"dayrom",Arial,sans-serif;
+	font-size:1.4em;
+	margin-right:15px;
+}
+
+header nav a {
+	text-decoration:none;
+	color:black;
+}
+
+header nav a:hover {
+	text-decoration:underline;
+	color:purple;
+}
+
+/* -----------------------*/
+
+/*BANNIERE ------------------*/
+#banniereSF {
+	background-image:url("images/sanfrancisco.jpg");
+	background-repeat:no-repeat;
+
+	position:relative;
+
+	height:200px;
+	
+	border-radius:10px;
+	box-shadow:0px 4px 4px grey;
+	margin:26px;
+}
+
+.bandeBanniere {
+	position:absolute;
+	bottom:0;
+	background-color:rgba(24,24,24,0.8);
+	color:white;
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	align-items:center;
+	width:99.5%;
+	padding-left:5px;
+	border-radius:10px;
+}
+
+.redButton {
+	position:absolute;
+	right:35px;
+	border-radius:5px;
+	/*background:url("images/fond_degraderouge.png");*/
+	background:linear-gradient(rgb(167,92,93) 60%,rgb(123,9,11));
+	padding:5px ;
+	text-decoration:none;
+	
+}
+
+.redButton:hover {
+	background:linear-gradient(rgb(123,9,11) 60%,rgb(167,92,93));
+}
+
+
+/*SECTION DU MILIEU ------------------*/
+section {
+	background-color:rgb(246,234,203);
+	display:flex;
+	flex-direction:row;
+	
+	padding-bottom:15px;
+	box-shadow:0px 1px 3px grey;
+	padding:10px;
+}
+
+.icoEpingle {
+	vertical-align:middle;
+}
+
+article {
+	flex:3;
+	text-align:justify;
+	margin-right:25px;
+}
+
+
+/*ASIDE -------------------------------------- */
+aside {
+	position:relative;
+	background-color:rgb(110,105,98);
+	flex:1.1;
+	color: rgb(234,238,227);
+	padding:10px;
+	font-size:0.9em;
+	margin:0;
+	
+	border-radius:15px;
+	box-shadow:0px 4px 4px grey;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	text-align:justify;
+}
+
+.flecheBlanche {
+	position:absolute;
+	top:100px;
+	left:-11px;
+}
+
+.zozorClasse {
+	border:1px solid black;
+}
+
+.imgReseaux {
+	display:flex;
+	flex-direction:row;
+	margin:0;
+	padding:0;
+	flex-wrap:nowrap;
+}
+/* ------------------------------------------------------------- */
+
+/* FOOTER ---------------------------------------- */
+/* ----------------------------------------------- */
+
+footer {
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	background-color:rgb(254,247,218);
+	padding:20px 20px 20px 20px;
+	/*background:url('images/ico_top.png') no-repeat top center, url('images/separateur.png') repeat-x top;*/
+}
+
+.flecheBulle
+
+
+footer p, footer ul {
+	font-size:0.8em;
+}
+
+footer a { 
+	text-decoration:none;
+	color:rgb(152,67,60);
+}
+
+.tweet {
+	flex:2;
+}
+
+.photo {
+	flex:3;
+	margin-left:25px;
+}
+
+.amis {
+	flex:3;
+	position:relative;
+}
+
+.listeAmis {
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	position:absolute;
+	top:32px;
+	left:-35px;
+}
+
+.listeAmis ul {
+	list-style-image:url("images/ico_liensexterne.png");
+	color:rgb(152,67,60);
+}
+
+
+.ph {
+	border:1px solid black;
+	margin-right:3px;
+}
